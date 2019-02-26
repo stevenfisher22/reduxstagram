@@ -8,14 +8,14 @@ import store, { history } from './store';
 import css from './styles/style.styl';
 
 // Import Components
-import Main from './components/Main';
 import Photogrid from './components/Photogrid';
 import Single from './components/Single';
+import App from './components/App'
 
 const router = (
     <Provider store={store}>
-        <Router history={browserHistory}>
-            <Route path="/" component={Main}>
+        <Router history={history}>
+            <Route path="/" component={App}>
                 <IndexRoute component={Photogrid}></IndexRoute>
                 <Route path="/view/:postid" component={Single}></Route>
             </Route>
